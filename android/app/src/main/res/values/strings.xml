@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">JanjiJiwaMail</string>
+    <string name="title_activity_main">JanjiJiwaMail</string>
+    <string name="package_name">io.ionic.starter</string>
+    <string name="custom_url_scheme">io.ionic.starter</string>
+  <color name="colorPrimary">#101010</color>
+  <color name="colorPrimaryDark">#000000</color>
+</resources>

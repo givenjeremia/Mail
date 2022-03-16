@@ -1,0 +1,54 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-buttons slot="start" style="z-index: 100;">
+        <ion-menu-button autoHide="true"></ion-menu-button>
+      </ion-buttons>
+      <ion-title style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;text-align: center;">Janji Jiwa Mail</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-card class="ion-padding" style="margin:auto 0;" color="dark">
+<ion-card-content *ngIf="edit==false">
+  <ion-item color="medium">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input disabled="true" name="email" type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item color="medium">
+    <ion-label position="floating">Name</ion-label>
+    <ion-input disabled="true" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item color="medium">
+    <ion-label position="floating">Birthdate</ion-label>
+    <ion-input disabled="true" name="birthday" type="date" [(ngModel)]="birthdate"></ion-input>
+  </ion-item>
+  <ion-item color="medium"> 
+    <ion-label position="floating">Address</ion-label>
+    <ion-input disabled="true" [(ngModel)]="address"></ion-input>
+  </ion-item>
+  <ion-button shape="round" type="submit" expand="block" (click)='changeTrue()'>Edit</ion-button>
+</ion-card-content>
+
+<ion-card-content *ngIf="edit">
+  <ion-item color="tertiary">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input disabled="true" name="email" type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item color="tertiary">
+    <ion-label position="floating">Name</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item color="tertiary">
+    <ion-label position="floating">Birthdate</ion-label>
+    <ion-input name="birthday" type="date" [(ngModel)]="birthdate"></ion-input>
+  </ion-item>
+  <ion-item color="tertiary">
+    <ion-label position="floating">Address</ion-label>
+    <ion-input [(ngModel)]="address"></ion-input>
+  </ion-item>
+  <ion-button shape="round" type="submit" expand="block" (click)='editProfile()'>Save</ion-button>
+  <ion-button shape="round" type="submit" expand="block" (click)='changeFalse()'>Cancel</ion-button>
+</ion-card-content>
+
+</ion-card>
+
+</ion-app>
